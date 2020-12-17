@@ -1,0 +1,64 @@
+.lang-word {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.lang-word h2 {
+    font-size: 65px;
+}
+.lang-word a {
+    text-decoration: none;
+    color: black;
+}
+.lang-word button {
+    font-size: 19px;
+    margin: 15px 0 30px 0;
+    padding: 3px 15px 3px 15px;
+    border: solid 1px black;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.lang-word button:hover {
+    background-color: white;
+    box-shadow: 0px 5px green, 0px 10px red;
+    transition: 0.5s;
+}
+.each-word {
+    width: 410px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    background-color: white;
+}
+.each-word h4 {
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline green;
+}
+.each-word li {
+    list-style: none;
+    display: flex;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 5px 10px 5px 10px;
+}
+.correct-wrong {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.correct-wrong span {
+    font-size: 20px;
+}
+.correct-guesses {
+    color: green;
+}
+.wrong-guesses {
+    color: red;
+}
+.total-correct {
+    font-size: 35px;
+}

@@ -1,0 +1,14 @@
+.reg-route p {
+    width: 400px;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+.reg-route h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}

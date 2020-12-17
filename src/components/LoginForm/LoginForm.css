@@ -1,0 +1,30 @@
+.LoginForm {
+    width: 370px;
+    margin: auto;
+}
+.login-btn {
+    text-align: center;
+    margin-top: 55px;
+}
+.LoginForm button {
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: transparent;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.LoginForm button:hover {
+    width: 130px;
+    color: tan;
+    border: solid 3px tan;
+    padding: 15px;
+    font-size: 20px;
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px gray;
+}
