@@ -63,6 +63,16 @@
 .rainbow-button:hover {
     animation: slidebg 2s linear infinite;
 }
+.feedback {
+    margin-top: 30px;
+}
+.DisplayFeedback {
+    font-size: 24px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
 
 @keyframes slidebg {
     to {

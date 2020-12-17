@@ -110,7 +110,7 @@ class LearningRoute extends Component {
                                 : this.context.nextWord.nextWord
                             : "nothing"}
                     </span>
-                    <h2>{this.showResults()}</h2>
+                    <h2 className='feedback'>{this.showResults()}</h2>
                     <div className='DisplayScore'>
                         <p>
                             Your total score is:{" "}
