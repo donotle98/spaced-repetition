@@ -80,7 +80,6 @@ class LearningRoute extends Component {
         })
             .then((res) => res.json())
             .then((res) => {
-                console.log(res);
                 this.context.setNextWord(res);
             })
             .catch((err) => console.log(err));
