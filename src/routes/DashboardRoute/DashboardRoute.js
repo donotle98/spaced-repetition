@@ -33,7 +33,7 @@ class DashboardRoute extends Component {
         return <ul className='word-list'>{result}</ul>;
     };
     componentDidMount() {
-        return fetch(`${config.API_ENDPOINT}api/language`, {
+        return fetch(`${config.API_ENDPOINT}language`, {
             headers: {
                 authorization: `bearer ${TokenService.getAuthToken()}`,
             },
