@@ -18,6 +18,7 @@ class LoginForm extends Component {
 
     handleSubmit = (ev) => {
         ev.preventDefault();
+        console.log("button pressed");
         const { username, password } = ev.target;
 
         this.setState({ error: null });

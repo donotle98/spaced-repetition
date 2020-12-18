@@ -29,7 +29,7 @@ class LearningRoute extends Component {
             this.context.setCurrentWord(this.context.nextWord);
             this.context.setGuess(this.state.usersGuess);
             this.setState({ resultsShowing: !this.state.resultsShowing });
-            fetch(`${config.API_ENDPOINT}/language/guess`, {
+            fetch(`${config.API_ENDPOINT}api/language/guess`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
@@ -73,7 +73,7 @@ class LearningRoute extends Component {
     };
 
     componentDidMount() {
-        return fetch(`${config.API_ENDPOINT}/language/head`, {
+        return fetch(`${config.API_ENDPOINT}api/language/head`, {
             headers: {
                 authorization: `bearer ${TokenService.getAuthToken()}`,
             },
