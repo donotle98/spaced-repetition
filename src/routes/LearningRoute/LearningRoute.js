@@ -73,7 +73,7 @@ class LearningRoute extends Component {
     };
 
     componentDidMount() {
-        return fetch(`${config.API_ENDPOINT}api/language/head`, {
+        return fetch(`${config.API_ENDPOINT}language/head`, {
             headers: {
                 authorization: `bearer ${TokenService.getAuthToken()}`,
             },

@@ -1,5 +1,21 @@
 # Spaced Repetition Capstone
 
+<h1>Chosen Language is Italian</h1>
+<ul>
+<li>Sign up or Log in</li>
+<li>Dashboard presents you with a list of words to practice and your total scores</li>
+<li>Click the learning button to start practicing the words</li>
+<li>You can enter a guess and check your answer and the score will be tallied up</li>
+</ul>
+<h1>Sign Up Page</h1>
+<img src="src/images/signup.png"/>
+<h1>Log In Page</h1>
+<img src="src/images/login.png"/>
+<h1>Dashboard</h1>
+<img src="src/images/dashboard.png"></img>
+<h1>Learning Page</h1>
+<img src="src/images/learning.png" />
+
 ## Setup
 
 To setup the application
