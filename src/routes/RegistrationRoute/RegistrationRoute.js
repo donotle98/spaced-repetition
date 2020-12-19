@@ -1,31 +1,39 @@
 import React, { Component } from "react";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
-
-import AuthApiService from "../../services/auth-api-service";
 import "./RegistrationRoute.css";
+import AuthApiService from "../../services/auth-api-service";
+import UserContext from "../../contexts/UserContext";
 
 class RegistrationRoute extends Component {
+    static contextType = UserContext;
     static defaultProps = {
+        location: {},
         history: {
             push: () => {},
         },
     };
 
     handleRegistrationSuccess = (username, password) => {
+        console.log(username, password);
         AuthApiService.postLogin({
-            username: username.value,
-            password: password.value,
+            username: username,
+            password: password,
         })
             .then((res) => {
-                username.value = "";
-                password.value = "";
                 this.context.processLogin(res.authToken);
-                this.props.onLoginSuccess();
+                const { location, history } = this.props;
+                const destination = (location.state || {}).from || "/";
+                history.push(destination);
             })
             .catch((res) => {
                 this.setState({ error: res.error });
             });
+        console.log("okay here");
     };
+    // handleRegistrationSuccess = () => {
+    //     console.log("okay here");
+    //     this.props.history.push("/login");
+    // };
 
     render() {
         return (
