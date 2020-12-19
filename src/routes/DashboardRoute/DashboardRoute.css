@@ -55,8 +55,10 @@
 }
 .correct-guesses {
     color: green;
+    font-weight: bold;
 }
 .wrong-guesses {
+    font-weight: bold;
     color: red;
 }
 .total-correct {
