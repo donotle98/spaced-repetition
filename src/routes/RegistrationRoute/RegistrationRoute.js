@@ -15,6 +15,7 @@ class RegistrationRoute extends Component {
 
     handleRegistrationSuccess = (username, password) => {
         console.log(username, password);
+        console.log("Posting login");
         AuthApiService.postLogin({
             username: username,
             password: password,
@@ -30,10 +31,6 @@ class RegistrationRoute extends Component {
             });
         console.log("okay here");
     };
-    // handleRegistrationSuccess = () => {
-    //     console.log("okay here");
-    //     this.props.history.push("/login");
-    // };
 
     render() {
         return (
