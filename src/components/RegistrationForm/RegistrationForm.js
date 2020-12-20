@@ -26,7 +26,6 @@ class RegistrationForm extends Component {
             password: password,
         })
             .then((res) => {
-                console.log(res);
                 this.context.processLogin(res.authToken);
                 this.props.onRegistrationSuccess();
             })
@@ -37,6 +36,9 @@ class RegistrationForm extends Component {
 
     handleSubmit = (ev) => {
         console.log("submit");
+        this.setState({
+            loading: true,
+        });
         ev.preventDefault();
         const { name, username, password } = ev.target;
         AuthApiService.postUser({
@@ -57,6 +59,16 @@ class RegistrationForm extends Component {
             .catch((res) => {
                 this.setState({ error: res.error });
             });
+    };
+
+    handleLoadingState = () => {
+        if (this.state.loading) {
+            return (
+                <div>
+                    <h1>Loading...</h1>
+                </div>
+            );
+        }
     };
 
     componentDidMount() {
@@ -103,6 +115,7 @@ class RegistrationForm extends Component {
                         required
                     />
                 </div>
+                {this.handleLoadingState()}
                 <footer>
                     <Button type='submit'>Sign up</Button>{" "}
                     <Link to='/login'>Already have an account?</Link>
