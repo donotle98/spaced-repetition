@@ -22,12 +22,12 @@ class LoginForm extends Component {
         const { username, password } = ev.target;
 
         this.setState({ error: null });
-
         AuthApiService.postLogin({
             username: username.value,
             password: password.value,
         })
             .then((res) => {
+                console.log(res);
                 username.value = "";
                 password.value = "";
                 this.context.processLogin(res.authToken);

@@ -40,7 +40,6 @@ class DashboardRoute extends Component {
         })
             .then((res) => res.json())
             .then((res) => {
-                console.log(res);
                 this.context.setLanguage(res.language);
                 this.context.setWords(res.words);
             });
